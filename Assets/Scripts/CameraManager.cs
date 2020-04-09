@@ -15,7 +15,7 @@ public class CameraManager : SingletonMonoBehaviour<CameraManager>
 
     TipeCam ActivCam;
 
-    [SerializeField] CinemachineBrain _cinemachineBrain;
+    //[SerializeField] CinemachineBrain _cinemachineBrain;
 
     [SerializeField] CinemachineVirtualCameraBase Camera_begin;
     [SerializeField] CinemachineVirtualCameraBase Camera_main;
@@ -24,9 +24,9 @@ public class CameraManager : SingletonMonoBehaviour<CameraManager>
 
     CinemachineTargetGroup targetGroup;
 
-    [SerializeField] GameObject TargetS_group_parent;
-    [SerializeField] GameObject[] TargetS_group;
-    int n_TargetS_group = 0;
+    //[SerializeField] GameObject TargetS_group_parent;
+    //[SerializeField] GameObject[] TargetS_group;
+    //int n_TargetS_group = 0;
 
 
     protected override void Awake()
@@ -36,6 +36,10 @@ public class CameraManager : SingletonMonoBehaviour<CameraManager>
         Set_ActivCamera(TipeCam.begin);
 
         targetGroup = Camera_group.GetComponentInChildren<CinemachineTargetGroup>();
+
+        //int[] hh = new int[0];
+        //hh.Add(7);
+        //print(hh[0]);
 
     }
 
@@ -54,13 +58,21 @@ public class CameraManager : SingletonMonoBehaviour<CameraManager>
         if (ActivCam != TipeCam.group)
             Set_ActivCamera(TipeCam.group);
 
-        n_TargetS_group++;
-        if (n_TargetS_group >= TargetS_group.Length)
-            n_TargetS_group = 0;
+        //n_TargetS_group++;
+        //if (n_TargetS_group >= TargetS_group.Length)
+        //    n_TargetS_group = 0;
+        //TargetS_group[n_TargetS_group].transform.parent = target_gameObject.transform;
 
-        TargetS_group[n_TargetS_group].transform.parent = target_gameObject.transform;
+
+        targetGroup.AddMember(target_gameObject.transform, 1f, 1f);
+
+
+        //List<CinemachineTargetGroup.Target> targets = new List<CinemachineTargetGroup.Target>(targetGroup.m_Targets);
+        //targets.Add(new CinemachineTargetGroup.Target { target = target_gameObject.transform, radius = 4f, weight = 1f });
+        //targetGroup.m_Targets = targets.ToArray();
+
+
         //TargetS_group[n_TargetS_group].transform.localPosition = Vector3.zero;
-
         //var target = new CinemachineTargetGroup.Target() { radius = 1f, weight = 1f, target = target_gameObject.transform };
         //targetGroup.m_Targets.Add(target);
 
@@ -68,22 +80,29 @@ public class CameraManager : SingletonMonoBehaviour<CameraManager>
 
     public void Del_obj_to_group(GameObject target_gameObject)
     {
-        bool is_allTargerInPlayer = true;
 
-        foreach(var Target_group in TargetS_group)
-        {
-            if (Target_group.transform.parent == target_gameObject.transform)
-            {
-                Target_group.transform.parent = TargetS_group_parent.transform;
-                //Target_group.transform.localPosition = Vector3.zero;
-            }
+        targetGroup.RemoveMember(target_gameObject.transform);
 
-            if (Target_group.transform.parent != TargetS_group_parent.transform) is_allTargerInPlayer = false;
-
-        }
-
-        if (is_allTargerInPlayer)
+        if (targetGroup.m_Targets.Length == 1)
             Set_ActivCamera(TipeCam.main);
+
+
+        //bool is_allTargerInPlayer = true;
+
+        //foreach(var Target_group in TargetS_group)
+        //{
+        //    if (Target_group.transform.parent == target_gameObject.transform)
+        //    {
+        //        Target_group.transform.parent = TargetS_group_parent.transform;
+        //        //Target_group.transform.localPosition = Vector3.zero;
+        //    }
+
+        //    if (Target_group.transform.parent != TargetS_group_parent.transform) is_allTargerInPlayer = false;
+
+        //}
+
+        //if (is_allTargerInPlayer)
+        //    Set_ActivCamera(TipeCam.main);
 
     }
 

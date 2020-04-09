@@ -7135,7 +7135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684000033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 11}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1706652495}
@@ -7158,36 +7158,6 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_Targets:
   - target: {fileID: 938712748}
-    weight: 1
-    radius: 1
-  - target: {fileID: 282240267}
-    weight: 1
-    radius: 1
-  - target: {fileID: 1689731594}
-    weight: 1
-    radius: 1
-  - target: {fileID: 766184182}
-    weight: 1
-    radius: 1
-  - target: {fileID: 1065290998}
-    weight: 1
-    radius: 1
-  - target: {fileID: 478854286}
-    weight: 1
-    radius: 1
-  - target: {fileID: 1570162985}
-    weight: 1
-    radius: 1
-  - target: {fileID: 250407749}
-    weight: 1
-    radius: 1
-  - target: {fileID: 1166165872}
-    weight: 1
-    radius: 1
-  - target: {fileID: 108613764}
-    weight: 1
-    radius: 1
-  - target: {fileID: 485443557}
     weight: 1
     radius: 1
 --- !u!1 &1689731593
@@ -7361,7 +7331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706652494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.919821, y: -2.5400486, z: -17.865005}
+  m_LocalPosition: {x: -14.919821, y: -2.7650487, z: -17.865005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 747212980}

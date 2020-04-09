@@ -9,6 +9,8 @@ public class TriggerDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("TrigerForCamera")) return;
+
         InTrigger = true;
         tag_Trigger = collision.tag;
     }
@@ -16,12 +18,16 @@ public class TriggerDetector : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("TrigerForCamera")) return;
+
         InTrigger = true;
         tag_Trigger = collision.tag;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.CompareTag("TrigerForCamera")) return;
+
         InTrigger = false;
     }
 }

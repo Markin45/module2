@@ -16,6 +16,8 @@ public class Character : MonoBehaviour
     bool goLeft = false;
     bool goRight = false;
 
+    private static readonly int HashSpeed = Animator.StringToHash("speed");
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,14 +58,20 @@ public class Character : MonoBehaviour
         scale.x = visualDirection;
         Visual.localScale = scale;
 
-        animator.SetFloat("speed", Mathf.Abs(vel));
+        animator.SetFloat(HashSpeed, Mathf.Abs(vel));
 
         if (goLeft)
             if (triggerDetector.InTrigger)
+            {
+                CameraManager.Instance.FirstStepCharacter();
                 rigidBody2D.AddForce(new Vector2(-MoveForce, 0), ForceMode2D.Force);
+            }
 
         if (goRight)
             if (triggerDetector.InTrigger)
+            {
+                CameraManager.Instance.FirstStepCharacter();
                 rigidBody2D.AddForce(new Vector2(MoveForce, 0), ForceMode2D.Force);
+            }
     }
 }

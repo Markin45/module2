@@ -24,7 +24,8 @@ public class PlatformFall : MonoBehaviour
             if (triggerDetector.InTrigger && triggerDetector.tag_Trigger == "Player")
             {
                 bool_Fall = true;
-                Invoke("fall", 1f);
+                //Invoke("fall", 1f);
+                Invoke(nameof(fall), 1f);
             }
     }
 

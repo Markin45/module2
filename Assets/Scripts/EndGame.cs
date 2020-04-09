@@ -15,6 +15,9 @@ public class EndGame : MonoBehaviour
 
     void Update()
     {
+        //if (triggerDetector.gameObject.CompareTag("Player"))
+        //    print("999");
+
         if (!bool_EndGame)
             if (triggerDetector.InTrigger && triggerDetector.tag_Trigger == "Player")
             {

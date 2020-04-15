@@ -1,4 +1,4 @@
-﻿public static partial class ArrayExtensions
+public static partial class ArrayExtensions
 {
 	public static T[] Add<T>(this T[] target, T item)
 	{

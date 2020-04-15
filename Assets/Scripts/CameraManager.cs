@@ -73,8 +73,9 @@ public class CameraManager : SingletonMonoBehaviour<CameraManager>
 
 
         //TargetS_group[n_TargetS_group].transform.localPosition = Vector3.zero;
+
         //var target = new CinemachineTargetGroup.Target() { radius = 1f, weight = 1f, target = target_gameObject.transform };
-        //targetGroup.m_Targets.Add(target);
+        //targetGroup.m_Targets = targetGroup.m_Targets.Add(target);
 
     }
 

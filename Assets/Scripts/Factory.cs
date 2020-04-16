@@ -40,6 +40,7 @@ public class Factory : SingletonMonoBehaviour<Factory>
         Saw,
         AidKit,
         Coin,
+        Enemy_1,
     }
 
     readonly Dictionary<Type_obj, Struct_obj> Dictionary_obj = new Dictionary<Type_obj, Struct_obj>
@@ -53,6 +54,8 @@ public class Factory : SingletonMonoBehaviour<Factory>
         {Type_obj.Saw, new Struct_obj("Traps/Traps_Saw", Type_group.Additional) },
         {Type_obj.AidKit, new Struct_obj("Bonuses/Bonuses_AidKit", Type_group.Additional) },
         {Type_obj.Coin, new Struct_obj("Bonuses/Bonuses_Coin", Type_group.Additional) },
+
+        {Type_obj.Enemy_1, new Struct_obj("Enemy/Enemy_1", Type_group.emeny) },
     };
 
 

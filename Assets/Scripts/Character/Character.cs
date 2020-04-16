@@ -69,5 +69,7 @@ public class Character : MonoBehaviour
         Visual.localScale = scale;
 
         animator.SetFloat("speed", Mathf.Abs(vel));
+
+
     }
 }

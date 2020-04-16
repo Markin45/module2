@@ -22,7 +22,13 @@ public sealed class CharacterInput : MonoBehaviour
             _character.MoveRight();
         }
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             _character.Jump();
+        }
+
+
+        //if (Input.GetButton("Jump"))
+        //    _character.Jump();
     }
 }

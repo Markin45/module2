@@ -13,16 +13,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     private void Start()
     {
-        //PlatfCreate.Instance.CreatPlatform();
-        //PlatfCreate.Instance.CreatPlatform();
-        //PlatfCreate.Instance.CreatPlatform();
-        //PlatfCreate.Instance.CreatPlatform();
-        //PlatfCreate.Instance.CreatPlatform();
-        //PlatfCreate.Instance.CreatPlatform();
-        //PlatfCreate.Instance.CreatPlatform();
-        //PlatfCreate.Instance.CreatPlatform();
-        //PlatfCreate.Instance.CreatPlatform();
-        //PlatfCreate.Instance.CreatPlatform();
     }
 
 

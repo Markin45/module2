@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
+
+
     }
 
     void Update()

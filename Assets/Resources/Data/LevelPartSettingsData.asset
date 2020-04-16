@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a8ba31693a24613975db11d1ef52da2, type: 3}
+  m_Name: LevelPartSettingsData
+  m_EditorClassIdentifier: 
+  _countPlatform: 100
+  _isGenerateLastPlatform: 0
+  _firstPlatform:
+    Type: 2
+    RandomHeight: {x: 0, y: 0}
+    RandomMargin:
+      Min: 0
+      Max: 0
+    AdditionalObjectData:
+      Type: 0
+      CreationProbability: 0
+  _platforms:
+  - Type: 2
+    RandomHeight: {x: 0, y: 0}
+    RandomMargin:
+      Min: 0
+      Max: 0
+    AdditionalObjectData:
+      Type: 0
+      CreationProbability: 0
+  - Type: 2
+    RandomHeight: {x: -8, y: 0}
+    RandomMargin:
+      Min: 2.93
+      Max: 4.41
+    AdditionalObjectData:
+      Type: 2
+      CreationProbability: 5
+  - Type: 1
+    RandomHeight: {x: 0, y: 0}
+    RandomMargin:
+      Min: 0
+      Max: 0
+    AdditionalObjectData:
+      Type: 0
+      CreationProbability: 0
+  - Type: 2
+    RandomHeight: {x: -6, y: 0}
+    RandomMargin:
+      Min: 3
+      Max: 3
+    AdditionalObjectData:
+      Type: 3
+      CreationProbability: 20
+  - Type: 1
+    RandomHeight: {x: -5, y: 5}
+    RandomMargin:
+      Min: 1
+      Max: 3
+    AdditionalObjectData:
+      Type: 1
+      CreationProbability: 20

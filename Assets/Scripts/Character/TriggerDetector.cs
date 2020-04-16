@@ -11,6 +11,11 @@ public class TriggerDetector : MonoBehaviour
         InTrigger = true;
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        InTrigger = true;
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         InTrigger = false;
